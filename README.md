@@ -38,21 +38,21 @@ The dataset contains **1,200 rows** and **14 columns**. The detailed breakdown o
 | **Maximum** | 2025-06-30 00:00:00 | 5.00 | $699.93 | 10.00 | $3,456.40 |
 
 1. Date (Timeline & Scope)
-•	The Range: The data starts on January 1, 2023 and ends on June 30, 2025.
-•	The Distribution: The mean (average date) is March 22, 2024, and the median (50%) is March 23, 2024. Because they are close, sales transactions are evenly distributed across this 2.5-year span. No massive spikes or major gaps in data collection.
+- The Range: The data starts on January 1, 2023 and ends on June 30, 2025.
+- The Distribution: The mean (average date) is March 22, 2024, and the median (50%) is March 23, 2024. Because they are close, sales transactions are evenly distributed across this 2.5-year span. No massive spikes or major gaps in data collection.
 2. UnitPrice & TotalPrice (Pricing & Revenue)
-•	Low-end vs. High-end: Individual products range from a very cheap $11.39 up to $699.93. The average item costs about $356.41.
-•	Cart Values: The absolute minimum order size is $11.39 (someone buying just one of the cheapest items), while the maximum order size is $3,456.40.
-•	Skewness: Look at the TotalPrice percentiles:
-o	50% (median) of the orders are under $823.62.
-o	Maximum is $3,456.40.
+- Low-end vs. High-end: Individual products range from a very cheap $11.39 up to $699.93. The average item costs about $356.41.
+- Cart Values: The absolute minimum order size is $11.39 (someone buying just one of the cheapest items), while the maximum order size is $3,456.40.
+- Skewness: Look at the TotalPrice percentiles:
+* 50% (median) of the orders are under $823.62.
+* Maximum is $3,456.40.
 This tells us it is right-skewed distribution. Most orders are on the lower-to-middle end, but a few customers are placing large orders that pull the average (mean = $1,053.97) up.
 3. Quantity & ItemsInCart (Purchase Habits)
 These two columns give us a direct look at how people shop.
 Quantity: This is likely the quantity of a specific item.
-•	Customers buy between 1 and 5 units of a single product per transaction.
-•	The average is 2.9 (almost 3 units).
+- Customers buy between 1 and 5 units of a single product per transaction.
+- The average is 2.9 (almost 3 units).
 ItemsInCart: This is the total number of items in their shopping cart.
-•	Carts range from 1 to 10 items.
-•	The average cart has 5.5 items.
-•	Customers aren't buying one item and leaving; they are actively filling their carts.
+- Carts range from 1 to 10 items.
+- The average cart has 5.5 items.
+- Customers aren't buying one item and leaving; they are actively filling their carts.
