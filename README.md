@@ -56,3 +56,20 @@ This tells us it is right-skewed distribution. Most orders are on the lower-to-m
 - Carts range from 1 to 10 items.
 - The average cart has 5.5 items.
 - Customers aren't buying one item and leaving; they are actively filling their carts.
+
+## Project 2 - Exploratory Data Analysis (EDA)
+
+### 📊 Distribution & Skewness Analysis (Data Geometry)
+
+The skewness coefficients for all numeric variables help us understand the "center of gravity" of our sales data.
+
+| Variable | Skewness Coefficient | Distribution Shape | Business Meaning |
+| :--- | :---: | :--- | :--- |
+| **Quantity** | `0.02` | Perfectly Symmetrical | Customers consistently buy across the 1–5 unit range; there are no erratic volume spikes. |
+| **UnitPrice** | `-0.02` | Perfectly Symmetrical | Our product catalog pricing is evenly distributed between budget and premium items. |
+| **ItemsInCart** | `0.00` | Perfectly Symmetrical | Basket sizes are completely uniform; shopping habits are highly predictable. |
+| **TotalPrice** | `0.89` | **Moderately Right-Skewed** | Most transactions are low-to-mid value, but a subset of high-value "whale" orders pulls the average up. |
+
+#### Key Takeaways
+* **Symmetrical Core Metrics:** Because `Quantity`, `UnitPrice`, and `ItemsInCart` have a skewness near `0`, their **Mean** is reliable for standard business reporting.
+* **The Revenue Skew:** `TotalPrice` is shifting toward a strong right skew. Also, the **Median ($823.62)** gives us a more accurate representation of customer's order value than the Mean ($1,053.97), because the Mean is highly influenced by top purchases.
