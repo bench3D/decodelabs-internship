@@ -59,6 +59,10 @@ This tells us it is right-skewed distribution. Most orders are on the lower-to-m
 
 ## Project 2 - Exploratory Data Analysis (EDA)
 
+## 1. Problem Statement: Decoding the Revenue Engine
+The core objective of this analysis is to interrogate our 2.5-year sales dataset, to uncover the cause of customer behavior.
+---
+
 ### 📊 Distribution & Skewness Analysis (Data Geometry)
 
 The skewness coefficients for all numeric variables help us understand the "center of gravity" of our sales data.
@@ -73,3 +77,34 @@ The skewness coefficients for all numeric variables help us understand the "cent
 #### Key Takeaways
 * **Symmetrical Core Metrics:** Because `Quantity`, `UnitPrice`, and `ItemsInCart` have a skewness near `0`, their **Mean** is reliable for standard business reporting.
 * **The Revenue Skew:** `TotalPrice` is shifting toward a strong right skew. Also, the **Median ($823.62)** gives us a more accurate representation of customer's order value than the Mean ($1,053.97), because the Mean is highly influenced by top purchases.
+
+### Outlier Identification
+
+Using the **Interquartile Range (IQR) Method**, we calculated the mathematical peaks for standard vs the extreme transactions.
+
+* **Upper Outlier Boundary:** Orders with a `TotalPrice` > **$3,330.41**
+* **VIP Signals Identified:** **8 rows** out of 1,200 qualify as high-value outliers
+
+#### The Verdict: Signal, Not Noise
+* These 8 entries represent high-volume transactions where customers combined maximum item quantities with premium-priced products.
+* These "high-end" transactions pull the overall revenue average upward. Thereby isolating the VIP profiles, allowing us to study high-value purchasing triggers independently from the rest of our standard customer base.
+
+### 🔗 Relationship Mapping (Bivariate Correlation Analysis)
+
+We calculated the **Pearson Correlation Coefficient ($r$)** across the numeric variables to measure the linear strength and direction of relationships in the purchasing data.
+
+| Relationship Pair | Correlation ($r$) | Strength | Business Interpretation |
+| :--- | :---: | :---: | :--- |
+| **UnitPrice vs. TotalPrice** | `0.72` | **Strong Positive** | The absolute strongest driver of high order values is the price of the item itself. Premium item sales drastically push up total cart revenue. |
+| **Quantity vs. ItemsInCart** | `0.65` | **Moderate-to-Strong** | A strong behavioral link: customers who load their carts with a high variety of products (`ItemsInCart`) also tend to buy multiple units (`Quantity`) of those specific items. |
+| **Quantity vs. TotalPrice** | `0.62` | **Moderate-to-Strong** | Bulk buying behavior directly translates to higher revenue per order. |
+| **ItemsInCart vs. TotalPrice** | `0.39` | **Moderate/Weak** | Surprisingly, simply having *more unique items* in a cart doesn't guarantee a massive total price, because the cart might be filled with low-cost items. |
+| **Quantity vs. UnitPrice** | `0.01` | **No Correlation** | Product pricing has zero impact on how many units a customer orders. Customers purchase higher quantities of premium items just as frequently as budget items. |
+
+#### 💡 Key Note: The Multiplier Effect
+While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62$)** runs a close second. Because `Quantity` and `ItemsInCart` are strongly linked ($0.65$), our most valuable operational strategy is to encourage adding more items to the cart, which will naturally triggers an increase in total units ordered.
+
+#### Strategic Recommendations:
+* Deploy a High-Value Customer Retention Path:
+* Optimize Cross-Selling Tactics to Create a Multiplier Effect
+* Anchor Financial Reporting on Median Performance
