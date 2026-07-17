@@ -109,6 +109,8 @@ While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62
 * Optimize Cross-Selling Tactics to Create a Multiplier Effect
 * Anchor Financial Reporting on Median Performance
 
+## Project 3 - Data Cleaning
+
 ### 🛍️ Query 1 Analysis: High-Ticket Catalog Performance
 
 For our first query, we filtered the dataset to isolate premium items that were priced above a $350, in order to see how they drive the revenue.
@@ -119,3 +121,20 @@ Out of 1,200 total orders, more than half (**618 transactions**) were high-price
 * The highest-earning transactions are heavily driven by volume. Our absolute top orders (like the $3,456 Tablet order and $3,390 Monitor order) occurred because customers maxed out their purchase limit by buying 5 units at once.
 * Even when premium products like Laptops, Phones, and Desks are bought individually (a quantity of 1), they still guarantee a solid baseline revenue of $350 to $365 per sale. 
 * High-priced items aren't restricted to tech. Standard furniture items (like Chairs and Desks) showed up alongside Laptops and Tablets at the very top of our revenue generators.
+
+### 💳 Query 2 Analysis: Sales Performance by Payment Method
+
+This query looks at how our customers choose to pay, breaking down total transaction counts, overall revenue, and average order values across all five checkout channels.
+
+| Payment Method | Total Transactions | Total Revenue | Average Order Value |
+| :--- | :---: | :---: | :---: |
+| **Credit Card** | 234 | $263,847.63 | $1,127.55 |
+| **Online** | 258 | $262,442.94 | $1,017.22 |
+| **Cash** | 246 | $259,786.29 | $1,056.04 |
+| **Gift Card** | 230 | $246,323.92 | $1,070.97 |
+| **Debit Card** | 232 | $232,361.18 | $1,001.56 |
+
+#### Key Observations:
+* Credit Cards and Online payments sit at the top of our financial board, with both pulling in over $262,000 in revenue. However, they achieve this in different ways. Credit Card users spend the most per visit on average ($1,127.55), while Online payment methods generate high overall revenue simply because more people use them (258 transactions).
+* Customer payment habits are well-distributed. No single payment method dominates the market; every channel has between 230 and 258 transactions. Suggesting our audience doesn't have one payment preference.
+* Even though Gift Cards have the lowest transaction volume (230), they have the second-highest average order value ($1,070.97). This  indicates that customers are highly comfortable using gift cards to py for the cost of high-priced purchases.
