@@ -114,6 +114,22 @@ While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62
 
 For our first query, we filtered the dataset to isolate premium items that were priced above a $350, in order to see how they drive the revenue.
 
+| Index | Product | UnitPrice | Quantity | TotalPrice |
+| :---: | :--- | :---: | :---: | :---: |
+| **0** | Tablet | $691.28 | 5 | $3,456.40 |
+| **1** | Monitor | $678.19 | 5 | $3,390.95 |
+| **2** | Laptop | $678.16 | 5 | $3,390.80 |
+| **3** | Chair | $676.98 | 5 | $3,384.90 |
+| **4** | Tablet | $674.04 | 5 | $3,370.20 |
+| *...* | *...* | *...* | *...* | *...* |
+| **613** | Laptop | $365.57 | 1 | $365.57 |
+| **614** | Phone | $359.99 | 1 | $359.99 |
+| **615** | Desk | $356.81 | 1 | $356.81 |
+| **616** | Phone | $355.15 | 1 | $355.15 |
+| **617** | Desk | $355.09 | 1 | $355.09 |
+
+*Rows: 618 | Columns: 4*
+
 Out of 1,200 total orders, more than half (**618 transactions**) were high-priced. 
 
 #### Key Observations:
