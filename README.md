@@ -59,10 +59,10 @@ This tells us it is right-skewed distribution. Most orders are on the lower-to-m
 
 ## Project 2 - Exploratory Data Analysis (EDA)
 
-## 1. Problem Statement: Decoding the Revenue Engine
+### 1. Problem Statement: Decoding the Revenue Engine
 The core objective of this analysis is to interrogate our 2.5-year sales dataset, to uncover the cause of customer behaviours.
 
-### 📊 Distribution & Skewness Analysis (Data Geometry)
+#### 📊 Distribution & Skewness Analysis (Data Geometry)
 
 The skewness coefficients for all numeric variables help us understand the "center of gravity" of our sales data.
 
