@@ -108,3 +108,14 @@ While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62
 * Deploy a High-Value Customer Retention Path:
 * Optimize Cross-Selling Tactics to Create a Multiplier Effect
 * Anchor Financial Reporting on Median Performance
+
+### 🛍️ Query 1 Analysis: High-Ticket Catalog Performance
+
+For our first query, we filtered the dataset to isolate premium items that were priced above a $350, in order to see how they drive the revenue.
+
+Out of 1,200 total orders, more than half (**618 transactions**) were high-priced. 
+
+#### Key Observations:
+* The highest-earning transactions are heavily driven by volume. Our absolute top orders (like the $3,456 Tablet order and $3,390 Monitor order) occurred because customers maxed out their purchase limit by buying 5 units at once.
+* Even when premium products like Laptops, Phones, and Desks are bought individually (a quantity of 1), they still guarantee a solid baseline revenue of $350 to $365 per sale. 
+* High-priced items aren't restricted to tech. Standard furniture items (like Chairs and Desks) showed up alongside Laptops and Tablets at the very top of our revenue generators.
