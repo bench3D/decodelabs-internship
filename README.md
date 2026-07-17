@@ -216,3 +216,25 @@ We are losing massive margins at the absolute end of the fulfillment cycle.
 * **Action 1: Deploy a Checkout Retargeting Engine.** Since our highest-value carts ($1,105.58 average) are the ones being cancelled, we must implement an automated check-in prompt or follow-up sequence to recover these VIP checkouts before cancellation triggers.
 * **Action 2: Permanent Free Shipping Tiers.** Because `FREESHIP` drives our absolute highest volume (313 orders) and largest ticket size ($1,070.41), we should replace temporary discount promotions with a permanent free shipping tier for all orders above $1,000 to naturally incentivize larger cart sizes.
 * **Action 3: Revise Inventory Allocation.** Since high-ticket furniture items (Chairs, Desks) are selling at high volumes but are also prone to returns and cancellations, we must adjust warehouse holding levels to match live delivery patterns rather than optimistic purchase order projections.
+
+---
+
+## How to Run This Project on Your Local Machine
+
+Follow these steps to install the dependencies and run the entire data analysis pipeline automatically.
+
+### Prerequisite: Install Python
+Ensure you have Python 3.8 or newer installed on your computer. You can check this by running `python --version` in your terminal.
+
+### Step-by-Step Execution
+
+1. **Clone or Download the Repository:**
+   ```bash
+   git clone [https://github.com/bench3D/decodelabs-internship.git](https://github.com/bench3D/decodelabs-internship.git)
+   cd decodelabs-internship
+
+    # 1. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
+    pip install pandas matplotlib seaborn notebook
+
+    # 2. Execute the notebook and save the run results automatically
+    jupyter nbconvert --to notebook --execute sales-dataset-analysis.ipynb --output executed_analysis.ipynb
