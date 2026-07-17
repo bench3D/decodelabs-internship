@@ -78,7 +78,6 @@ The skewness coefficients for all numeric variables help us understand the "cent
 * **The Revenue Skew:** `TotalPrice` is shifting toward a strong right skew. Also, the **Median ($823.62)** gives us a more accurate representation of customer's order value than the Mean ($1,053.97), because the Mean is highly influenced by top purchases.
 
 ### Outlier Identification
-
 Using the **Interquartile Range (IQR) Method**, we calculated the mathematical peaks for standard vs the extreme transactions.
 
 * **Upper Outlier Boundary:** Orders with a `TotalPrice` > **$3,330.41**
@@ -232,12 +231,13 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
    ```bash
    git clone [https://github.com/bench3D/decodelabs-internship.git](https://github.com/bench3D/decodelabs-internship.git)
    cd decodelabs-internship
-
-    # 1. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
-    pip install pandas matplotlib seaborn notebook
-
-    # 2. Execute the notebook and save the run results automatically
-    jupyter nbconvert --to notebook --execute sales-dataset-analysis.ipynb --output executed_analysis.ipynb
+   
+   # 1. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
+   pip install pandas matplotlib seaborn notebook
+   
+   # 2. Execute the notebook and save the run results automatically
+   jupyter nbconvert --to notebook --execute sales-dataset-analysis
+   ipynb --output executed_analysis.ipynb
 
 ## 💡 Tools Used
 - Python, Jupyter Notebook
@@ -245,5 +245,5 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
 ---
 ## 👤 Author
 **Benedict Chima Ogbulachi**  
-LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi)
+LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi);
 Email Adress: benedictogbulachi@outlook.com
