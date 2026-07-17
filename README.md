@@ -196,26 +196,26 @@ This query monitors our logistics pipeline by grouping our transactions by fulfi
 # 📈 Project 4: Data Storytelling Case Study
 
 ## 1. Executive Summary (The 5-Second Landscape)
-*   **Core Question:** Why is our net delivered revenue lagging behind gross projections, and which structural variables are causing leakage?
-*   **The Headline:** Our primary sales generation tools (Credit Card checkouts and Free Shipping coupons) are working exceptionally well, but logistical leaks—specifically high-value order cancellations—are actively eroding over 20% of our potential revenue pipeline.
+* **Core Question:** Why is our net delivered revenue lagging behind gross projections, and which structural variables are causing leakage?
+* **The Headline:** Our primary sales generation tools (Credit Card checkouts and Free Shipping coupons) are working exceptionally well, but logistical leaks—specifically high-value order cancellations—are actively eroding over 20% of our potential revenue pipeline.
 
 ---
 
 ## 2. Structured Narrative Flow (The SCR Framework)
 
-### 🎬 The Situation (Current baseline state)
-Our gross sales generation is highly active, robust, and evenly distributed over the 2.5-year period. We have established payment habits that are highly stable across all categories (ranging from 230 to 258 transactions each) and have successfully generated over $1.2 million in potential transacted value. Our product catalog pricing is completely symmetrical, showing steady buying appetite across both budget and premium tiers.
+### 🎬 The Situation (Current State)
+Our gross sales generation is highly active and evenly distributed over the 2.5-year period. We have established payment habits that are stable across all categories (from 230 to 258 transactions each) and have successfully generated over $1.2 million in transacted value, potentially.
 
 ### ⚠️ The Complication
-We are losing massive margins at the absolute end of the fulfillment cycle. 
+We are losing great margins at the end of the fulfillment cycle. 
 * "Cancelled" orders have surpassed "Delivered" orders as our single largest fulfillment bucket (250 orders totaling **$276,396.21**).
 * Cancelled orders are not cheap buys, they have the highest average value in our entire funnel (**$1,105.58** per cart).
 * Our revenue is very reliant on promotional coupons, with 891 out of 1,200 orders requiring a code to complete.
 
 ### 💡 Data-driven strategic recommendations
-* **Action 1: Deploy a Checkout Retargeting Engine.** Since our highest-value carts ($1,105.58 average) are the ones being cancelled, we must implement an automated check-in prompt or follow-up sequence to recover these VIP checkouts before cancellation triggers.
+* **Action 1: Deploy a Checkout Retargeting Engine.** Since our highest-value carts ($1,105.58 average) are the ones being cancelled, we must implement an automated check-in prompt.
 * **Action 2: Permanent Free Shipping Tiers.** Because `FREESHIP` drives our absolute highest volume (313 orders) and largest ticket size ($1,070.41), we should replace temporary discount promotions with a permanent free shipping tier for all orders above $1,000 to naturally incentivize larger cart sizes.
-* **Action 3: Revise Inventory Allocation.** Since high-ticket furniture items (Chairs, Desks) are selling at high volumes but are also prone to returns and cancellations, we must adjust warehouse holding levels to match live delivery patterns rather than optimistic purchase order projections.
+* **Action 3: Revise Inventory Allocation.** Since the high-ticket furniture items (Chairs, Desks) are selling at high volumes but are also prone to returns and cancellations, we must adjust warehouse holding levels to match live delivery patterns rather than optimistic purchase order projections.
 
 ---
 
@@ -238,3 +238,12 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
 
     # 2. Execute the notebook and save the run results automatically
     jupyter nbconvert --to notebook --execute sales-dataset-analysis.ipynb --output executed_analysis.ipynb
+
+## 💡 Tools Used
+- Python, Jupyter Notebook
+- SQL
+---
+## 👤 Author
+**Benedict Chima Ogbulachi**  
+LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi)
+Email Adress: benedictogbulachi@outlook.com
