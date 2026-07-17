@@ -239,10 +239,11 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
    jupyter nbconvert --to notebook --execute sales-dataset-analysis
    ipynb --output executed_analysis.ipynb
 
+---
 ## 💡 Tools Used
 - Python, Jupyter Notebook
 - SQL
----
+
 ## 👤 Author
 **Benedict Chima Ogbulachi**  
 LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi);
