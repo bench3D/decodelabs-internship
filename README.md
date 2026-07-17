@@ -60,8 +60,7 @@ This tells us it is right-skewed distribution. Most orders are on the lower-to-m
 ## Project 2 - Exploratory Data Analysis (EDA)
 
 ## 1. Problem Statement: Decoding the Revenue Engine
-The core objective of this analysis is to interrogate our 2.5-year sales dataset, to uncover the cause of customer behavior.
----
+The core objective of this analysis is to interrogate our 2.5-year sales dataset, to uncover the cause of customer behaviours.
 
 ### 📊 Distribution & Skewness Analysis (Data Geometry)
 
