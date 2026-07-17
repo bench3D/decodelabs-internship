@@ -149,6 +149,8 @@ This query looks at how our customers choose to pay, breaking down total transac
 | **Gift Card** | 230 | $246,323.92 | $1,070.97 |
 | **Debit Card** | 232 | $232,361.18 | $1,001.56 |
 
+![payment-methods](images/visual_1_payment_methods.png)
+
 #### Key Observations:
 * Credit Cards and Online payments sit at the top of our financial board, with both pulling in over $262,000 in revenue. However, they achieve this in different ways. Credit Card users spend the most per visit on average ($1,127.55), while Online payment methods generate high overall revenue simply because more people use them (258 transactions).
 * Customer payment habits are well-distributed. No single payment method dominates the market; every channel has between 230 and 258 transactions. Suggesting our audience doesn't have one payment preference.
@@ -163,6 +165,8 @@ This query evaluates how our discount codes are driving sales, looking at how ea
 | **FREESHIP** | 313 | $335,036.99 | $1,070.41 |
 | **SAVE10** | 286 | $304,840.02 | $1,065.87 |
 | **WINTER15** | 292 | $302,483.54 | $1,035.90 |
+
+![coupons](images/visual_2_coupons.png)
 
 #### Key Observations:
 * `FREESHIP` is our most successful promotion. It was used 313 times and brought in over $335,000. It also drove the highest average order value ($1,070.41), proving that customers are highly motivated to buy more when they know they won't have to pay for delivery at checkout.
@@ -181,8 +185,34 @@ This query monitors our logistics pipeline by grouping our transactions by fulfi
 | **Returned** | 247 | $243,277.70 | $984.93 |
 | **Delivered** | 231 | $242,600.32 | $1,050.22 |
 
+![fulfillments](images/visual_3_fulfillment.png)
+
 #### Key Observations:
 * Our single biggest bucket by both transaction volume (250) and revenue ($276,000+) is "Cancelled" orders. This is a big red flag. When customers cancel, they aren't just cancelling cheap items, these cancellations are happening on high-priced carts, averaging $1,105.58 per order.
 * "Returned" orders is another major leak, locking up over $243,000 across 247 transactions. Investigating *why* these products are coming back is crucial, as return logistics represent a major hidden cost.
-* On the operational side, active shipping pipeline is healthy and balanced. There is a steady flow of goods with about $256,000 currently "Pending" processing and $246,000 actively "Shipped" on its way to customers. 
+* On the operational side, active shipping pipeline is healthy and balanced. Thee is a steady flow of goods with about $256,000 currently "Pending" processing and $246,000 actively "Shipped" on its way to customers. 
 * Our clean, successfully realized revenue ("Delivered" orders) is at $242,600.32. Comparing this to our cancellations and returns shows that we are leaving a massive amount of potential money on the table due to order cancellations.
+
+# 📈 Project 4: Data Storytelling Case Study
+
+## 1. Executive Summary (The 5-Second Landscape)
+*   **Core Question:** Why is our net delivered revenue lagging behind gross projections, and which structural variables are causing leakage?
+*   **The Headline:** Our primary sales generation tools (Credit Card checkouts and Free Shipping coupons) are working exceptionally well, but logistical leaks—specifically high-value order cancellations—are actively eroding over 20% of our potential revenue pipeline.
+
+---
+
+## 2. Structured Narrative Flow (The SCR Framework)
+
+### 🎬 The Situation (Current baseline state)
+Our gross sales generation is highly active, robust, and evenly distributed over the 2.5-year period. We have established payment habits that are highly stable across all categories (ranging from 230 to 258 transactions each) and have successfully generated over $1.2 million in potential transacted value. Our product catalog pricing is completely symmetrical, showing steady buying appetite across both budget and premium tiers.
+
+### ⚠️ The Complication
+We are losing massive margins at the absolute end of the fulfillment cycle. 
+* "Cancelled" orders have surpassed "Delivered" orders as our single largest fulfillment bucket (250 orders totaling **$276,396.21**).
+* Cancelled orders are not cheap buys, they have the highest average value in our entire funnel (**$1,105.58** per cart).
+* Our revenue is very reliant on promotional coupons, with 891 out of 1,200 orders requiring a code to complete.
+
+### 💡 Data-driven strategic recommendations
+* **Action 1: Deploy a Checkout Retargeting Engine.** Since our highest-value carts ($1,105.58 average) are the ones being cancelled, we must implement an automated check-in prompt or follow-up sequence to recover these VIP checkouts before cancellation triggers.
+* **Action 2: Permanent Free Shipping Tiers.** Because `FREESHIP` drives our absolute highest volume (313 orders) and largest ticket size ($1,070.41), we should replace temporary discount promotions with a permanent free shipping tier for all orders above $1,000 to naturally incentivize larger cart sizes.
+* **Action 3: Revise Inventory Allocation.** Since high-ticket furniture items (Chairs, Desks) are selling at high volumes but are also prone to returns and cancellations, we must adjust warehouse holding levels to match live delivery patterns rather than optimistic purchase order projections.
