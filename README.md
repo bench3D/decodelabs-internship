@@ -138,3 +138,36 @@ This query looks at how our customers choose to pay, breaking down total transac
 * Credit Cards and Online payments sit at the top of our financial board, with both pulling in over $262,000 in revenue. However, they achieve this in different ways. Credit Card users spend the most per visit on average ($1,127.55), while Online payment methods generate high overall revenue simply because more people use them (258 transactions).
 * Customer payment habits are well-distributed. No single payment method dominates the market; every channel has between 230 and 258 transactions. Suggesting our audience doesn't have one payment preference.
 * Even though Gift Cards have the lowest transaction volume (230), they have the second-highest average order value ($1,070.97). This  indicates that customers are highly comfortable using gift cards to py for the cost of high-priced purchases.
+
+### 🎟️ Query 3 Analysis: Promotional Code Performance
+
+This query evaluates how our discount codes are driving sales, looking at how each code was used and the total revenue generated from those transactions.
+
+| Coupon Code | Usage Count | Total Revenue | Average Order Value |
+| :--- | :---: | :---: | :---: |
+| **FREESHIP** | 313 | $335,036.99 | $1,070.41 |
+| **SAVE10** | 286 | $304,840.02 | $1,065.87 |
+| **WINTER15** | 292 | $302,483.54 | $1,035.90 |
+
+#### Key Observations:
+* `FREESHIP` is our most successful promotion. It was used 313 times and brought in over $335,000. It also drove the highest average order value ($1,070.41), proving that customers are highly motivated to buy more when they know they won't have to pay for delivery at checkout.
+* Comparing the percentage-off codes shows a cool behavioural action. Even though the seasonal `WINTER15` discount was used a little more than `SAVE10` (292 vs. 286), the `SAVE10` code actually brought in more total money. Customers using the smaller 10% discount had higher individual cart totals than those using the 15% discount.
+* In total, these three active coupon codes were applied to 891 transactions, driving nearly $1 million in sales. This shows that majority of our revenue are tied to active market campaigns.
+
+### 📦 Query 4 Analysis: Operational Fulfillment & Pipeline Health
+
+This query monitors our logistics pipeline by grouping our transactions by fulfillment status to see where our sales volume and revenue are currently tied up. 
+
+| Order Status | Order Volume | Total Tied-Up Revenue | Average Value per Order |
+| :--- | :---: | :---: | :---: |
+| **Cancelled** | 250 | $276,396.21 | $1,105.58 |
+| **Pending** | 237 | $256,328.15 | $1,081.55 |
+| **Shipped** | 235 | $246,159.58 | $1,047.49 |
+| **Returned** | 247 | $243,277.70 | $984.93 |
+| **Delivered** | 231 | $242,600.32 | $1,050.22 |
+
+#### Key Observations:
+* Our single biggest bucket by both transaction volume (250) and revenue ($276,000+) is "Cancelled" orders. This is a big red flag. When customers cancel, they aren't just cancelling cheap items, these cancellations are happening on high-priced carts, averaging $1,105.58 per order.
+* "Returned" orders is another major leak, locking up over $243,000 across 247 transactions. Investigating *why* these products are coming back is crucial, as return logistics represent a major hidden cost.
+* On the operational side, active shipping pipeline is healthy and balanced. There is a steady flow of goods with about $256,000 currently "Pending" processing and $246,000 actively "Shipped" on its way to customers. 
+* Our clean, successfully realized revenue ("Delivered" orders) is at $242,600.32. Comparing this to our cancellations and returns shows that we are leaving a massive amount of potential money on the table due to order cancellations.
