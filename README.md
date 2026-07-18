@@ -177,7 +177,7 @@ This query evaluates how our discount codes are driving sales, looking at how ea
 This query monitors our logistics pipeline by grouping our transactions by fulfillment status to see where our sales volume and revenue are currently tied up. 
 
 | Order Status | Order Volume | Total Tied-Up Revenue | Average Value per Order |
-| :--- | :---: | :---: | :---: |
+| --- | --- | --- | --- |
 | **Cancelled** | 250 | $276,396.21 | $1,105.58 |
 | **Pending** | 237 | $256,328.15 | $1,081.55 |
 | **Shipped** | 235 | $246,159.58 | $1,047.49 |
@@ -226,18 +226,18 @@ Follow these steps to install the dependencies and run the entire data analysis 
 Ensure you have Python 3.8 or newer installed on your computer. You can check this by running `python --version` in your terminal.
 
 ### Step-by-Step Execution
-
-1. **Clone or Download the Repository:**
-   ```bash
-   git clone [https://github.com/bench3D/decodelabs-internship.git](https://github.com/bench3D/decodelabs-internship.git)
-   cd decodelabs-internship
+```bash
+# 1. **Clone or Download the Repository:**
+git clone https://github.com/bench3D/decodelabs-internship.git
+cd decodelabs-internship
    
-   # 1. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
-   pip install pandas matplotlib seaborn notebook
+# 2. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
+pip install pandas matplotlib seaborn notebook
    
-   # 2. Execute the notebook and save the run results automatically
-   jupyter nbconvert --to notebook --execute sales-dataset-analysis
-   ipynb --output executed_analysis.ipynb
+# 3. Execute the notebook and save the run results automatically
+jupyter nbconvert --to notebook --execute sales-dataset-analysis
+ipynb --output executed_analysis.ipynb
+```
 
 ---
 ## 💡 Tools Used
@@ -246,5 +246,6 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
 
 ## 👤 Author
 **Benedict Chima Ogbulachi**  
-LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi);
-Email Adress: benedictogbulachi@outlook.com
+- LinkedIn Profile: [Benedict Ogbulachi](https://www.linkedin.com/in/benedictogbulachi)
+- X: [@_bench3D](https://x.com/_bench3D)
+- Email Adress: benedictogbulachi@outlook.com
