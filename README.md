@@ -40,21 +40,21 @@ The dataset contains **1,200 rows** and **14 columns**. The detailed breakdown o
 
 #### Breakdown of Summary Statistics
 
-1. Date (Timeline & Scope)
+##### 1. Date (Timeline & Scope)
 *   The Range: The data starts on January 1, 2023 and ends on June 30, 2025.
 *   The Distribution: The mean (average date) is March 22, 2024, and the median (50%) is March 23, 2024. Because they are close, sales transactions are evenly distributed across this 2.5-year span. No massive spikes or major gaps in data collection.
 
-2. UnitPrice & TotalPrice (Pricing & Revenue)
+##### 2. UnitPrice & TotalPrice (Pricing & Revenue)
 *   Individual products range from a very cheap $11.39 up to $699.93. The average item costs about $356.41.
 *   The absolute minimum order size is $11.39 (someone buying just one of the cheapest items), while the maximum order size is $3,456.40.
 
-3. Skewness (Look at the TotalPrice percentiles)
+##### 3. Skewness (Look at the TotalPrice percentiles)
 *   50% (median) of the orders are under $823.62.
 *   Maximum is $3,456.40.
 
 This tells us it is right-skewed distribution. Most orders are on the lower-to-middle end, but a few customers are placing large orders that pull the average (mean = $1,053.97) up.
 
-4. Quantity & ItemsInCart (Purchase Habits)
+##### 4. Quantity & ItemsInCart (Purchase Habits)
 *   Customers buy between 1 and 5 units of a single product per transaction.
 *   The average is 2.9 (almost 3 units).
 *   Cars range from 1 to 10 items.
