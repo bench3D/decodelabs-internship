@@ -41,21 +41,21 @@ The dataset contains **1,200 rows** and **14 columns**. The detailed breakdown o
 #### Breakdown of Summary Statistics
 
 1. **Date (Timeline & Scope)**
-- The Range: The data starts on January 1, 2023 and ends on June 30, 2025.
-- The Distribution: The mean (average date) is March 22, 2024, and the median (50%) is March 23, 2024. Because they are close, sales transactions are evenly distributed across this 2.5-year span. No massive spikes or major gaps in data collection.
+   - The Range: The data starts on January 1, 2023 and ends on June 30, 2025.
+   - The Distribution: The mean (average date) is March 22, 2024, and the median (50%) is March 23, 2024. Because they are close, sales transactions are evenly distributed across this 2.5-year span. No massive spikes or major gaps in data collection.
 2. **UnitPrice & TotalPrice (Pricing & Revenue)**
-- Individual products range from a very cheap $11.39 up to $699.93. The average item costs about $356.41.
-- The absolute minimum order size is $11.39 (someone buying just one of the cheapest items), while the maximum order size is $3,456.40.
+   - Individual products range from a very cheap $11.39 up to $699.93. The average item costs about $356.41.
+   - The absolute minimum order size is $11.39 (someone buying just one of the cheapest items), while the maximum order size is $3,456.40.
 3. **Skewness (Look at the TotalPrice percentiles)**
-- 50% (median) of the orders are under $823.62.
-- Maximum is $3,456.40.
+   - 50% (median) of the orders are under $823.62.
+   - Maximum is $3,456.40.
 This tells us it is right-skewed distribution. Most orders are on the lower-to-middle end, but a few customers are placing large orders that pull the average (mean = $1,053.97) up.
 4. **Quantity & ItemsInCart (Purchase Habits)**
-- Customers buy between 1 and 5 units of a single product per transaction.
-- The average is 2.9 (almost 3 units).
-- Carts range from 1 to 10 items.
-- The average cart has 5.5 items.
-- Customers aren't buying one item and leaving; they are actively filling their carts.
+   - Customers buy between 1 and 5 units of a single product per transaction.
+   - The average is 2.9 (almost 3 units).
+   - Carts range from 1 to 10 items.
+   - The average cart has 5.5 items.
+   - Customers aren't buying one item and leaving; they are actively filling their carts.
 
 ## Project 2 - Exploratory Data Analysis (EDA)
 
@@ -107,7 +107,7 @@ While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62
 * Optimize Cross-Selling Tactics to Create a Multiplier Effect
 * Anchor Financial Reporting on Median Performance
 
-## Project 3 - Data Cleaning
+## Project 3 - Query Analysis of the Business Questions
 
 ### 🛍️ Query 1 Analysis: High-Ticket Catalog Performance
 
@@ -132,7 +132,7 @@ For our first query, we filtered the dataset to isolate premium items that were 
 Out of 1,200 total orders, more than half (**618 transactions**) were high-priced. 
 
 #### Key Observations:
-* The highest-earning transactions are heavily driven by volume. Our absolute top orders (like the $3,456 Tablet order and $3,390 Monitor order) occurred because customers maxed out their purchase limit by buying 5 units at once.
+* The highest-earning transactions are driven by volume. Our absolute top orders (like the $3,456 Tablet order and $3,390 Monitor order) occurred because customers maxed out their purchase limit by buying 5 units at once.
 * Even when premium products like Laptops, Phones, and Desks are bought individually (a quantity of 1), they still guarantee a solid baseline revenue of $350 to $365 per sale. 
 * High-priced items aren't restricted to tech. Standard furniture items (like Chairs and Desks) showed up alongside Laptops and Tablets at the very top of our revenue generators.
 
@@ -200,7 +200,7 @@ This query monitors our logistics pipeline by grouping our transactions by fulfi
 
 ---
 
-## 2. Structured Narrative Flow (The SCR Framework)
+## 2. Structured Narrative (The SCR Framework)
 
 ### 🎬 The Situation (Current State)
 Our gross sales generation is highly active and evenly distributed over the 2.5-year period. We have established payment habits that are stable across all categories (from 230 to 258 transactions each) and have successfully generated over $1.2 million in transacted value, potentially.
@@ -227,14 +227,14 @@ Ensure you have Python 3.8 or newer installed on your computer. You can check th
 
 ### Step-by-Step Execution
 ```bash
-# 1. **Clone or Download the Repository:**
+# 1. clone or download the repository:
 git clone https://github.com/bench3D/decodelabs-internship.git
 cd decodelabs-internship
    
-# 2. Install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
+# 2. install the required libraries (pandas, matplotlib, seaborn, sqlite3 is built-in)
 pip install pandas matplotlib seaborn notebook
    
-# 3. Execute the notebook and save the run results automatically
+# 3. execute the notebook and save the run results automatically
 jupyter nbconvert --to notebook --execute sales-dataset-analysis
 ipynb --output executed_analysis.ipynb
 ```

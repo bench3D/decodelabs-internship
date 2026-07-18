@@ -1,4 +1,4 @@
---Query 1
+--Query 1: High-Ticket Catalog Performance
 SELECT 
     Product, 
     UnitPrice, 
@@ -8,7 +8,7 @@ FROM sales_data
 WHERE UnitPrice > 350.00  -- Targets premium catalog tier
 ORDER BY TotalPrice DESC;
 
---Query 2
+--Query 2: Sales Performance by Payment Method
 SELECT 
     PaymentMethod,
     COUNT(*) AS total_transactions,            -- Measures volume/scale including nulls
@@ -18,7 +18,7 @@ FROM sales_data
 GROUP BY PaymentMethod
 ORDER BY total_revenue DESC;
 
---Query 3
+--Query 3: Promotional Code Performance
 SELECT 
     CouponCode,
     COUNT(*) AS usage_count,
@@ -28,7 +28,7 @@ WHERE CouponCode IS NOT NULL AND CouponCode <> 'No coupon'
 GROUP BY CouponCode
 ORDER BY usage_count DESC;
 
---Query 4
+--Query 4: Operational Fulfillment & Pipeline Health
 SELECT 
     OrderStatus,
     COUNT(*) AS order_volume,
