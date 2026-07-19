@@ -118,7 +118,7 @@ While **UnitPrice ($0.72$)** is the primary driver of revenue, **Quantity ($0.62
 For our first query, we filtered the dataset to isolate premium items that were priced above a $350, in order to see how they drive the revenue.
 
 | Index | Product | UnitPrice | Quantity | TotalPrice |
-| :---: | :--- | :---: | :---: | :---: |
+| --- | --- | --- | --- | --- |
 | **0** | Tablet | $691.28 | 5 | $3,456.40 |
 | **1** | Monitor | $678.19 | 5 | $3,390.95 |
 | **2** | Laptop | $678.16 | 5 | $3,390.80 |
